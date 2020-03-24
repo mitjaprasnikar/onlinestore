@@ -7,7 +7,7 @@ import {connect} from "react-redux";
 import CartIcon from '../cart-icon/cart-icon';
 import Cart from '../cart-drop/cart-drop';
 import { createStructuredSelector } from "reselect";
-import { selectCartItemsCount, selectCartHidden } from '../../redux/cart/cart-selectors';
+import { selectCartHidden } from '../../redux/cart/cart-selectors';
 import { selectCurrentUser } from '../../redux/user/user-selector';
 
 const Header = ({ currentUser, hidden }) => (
