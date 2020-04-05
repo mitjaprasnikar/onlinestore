@@ -1,26 +1,19 @@
 import React from "react";
-import SHOP_DATA from "./shop-data";
-import Collection from "../../components/collection/collection";
+import {Route} from "react-router-dom";
 
-class Shop extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            list: SHOP_DATA
-        };
-    }
-    render() {  
-       const data = this.state.list;
-        return( <div className="shop-page">
-            {
-            data.map( ({id, ...otherCollectionProps}) => (
-                <Collection key={id} {...otherCollectionProps} />
-            ))
-            }
+
+import CollectionsOverview from "../../components/collections-overview/collections-overview";
+import CollectionPage from "../collection/collection";
+
+const Shop = ({match}) => (
+
+        <div className="shop-page">
+           <Route exact path={`${match.path}`} component={CollectionsOverview}/>
+           <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
             </div>
-        )
-    }
-}
+       )
 
+
+    
 
 export default Shop;
