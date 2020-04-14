@@ -41,7 +41,7 @@ class Login extends React.Component {
     render() {
         return (
             <SigninContainer>
-                <SignInTitle>already have an account</SignInTitle> 
+                <SignInTitle>I already have an account</SignInTitle> 
                 <span>Sign in with your email and password</span>
 
 
